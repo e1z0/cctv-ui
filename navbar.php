@@ -17,19 +17,6 @@
         <li><a href="records.php">Records</a></li>
         <li><a href="favs.php">Favorites</a></li>
 	<li><a href="charts.php">Charts</a></li>
-<!--        <li><a href="#">Link2</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>-->
       </ul>
       <form class="navbar-form navbar-left" method="post">
         <div class="form-group">
@@ -73,16 +60,6 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li><a id="stats" href="#"></a></li>
-<!--        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>-->
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -128,19 +105,14 @@ var i = setInterval(function(){
             });
 
 $("#datetimepicker3").datepicker({
-    // The hidden field to receive the date
-//    altField: "#dateHidden",
-    // The format you want
     altFormat: "yy-mm-dd",
     showOn: "button",
     buttonText: "Select day",
-    // The format the user actually sees
     dateFormat: "yy-mm-dd",
     onSelect: function (date) {
-        // Your CSS changes, just in case you still need them        
-var start_date = date + " 00:00:00";
-var end_date = date + " 23:59:59";
-console.log("Search between: "+start_date+" and "+end_date);
+    var start_date = date + " 00:00:00";
+    var end_date = date + " 23:59:59";
+    console.log("Search between: "+start_date+" and "+end_date);
 
 
 var url = '<?=$_SERVER["PHP_SELF"]?>';

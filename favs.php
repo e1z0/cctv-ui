@@ -73,34 +73,6 @@ $conn->close();
  </tbody>
 </table></div><br>
                             <div class="loaderis" id="puslapis_load" style="display:none; position: absolute; z-index: 99999; width: 90%"></div><br><br><br>
-<script>
-/*$(window).bind('scroll', function() {
-    if($(window).scrollTop() >= $('#data').offset().top + $('#data').outerHeight() - window.innerHeight) {
-
-
-                                        datatype = "html";
-                                        url = "showmore.php?page=" + jQuery('#recordai tr').length+"&type=1&search=<?=$post?>&date1=<?=urlencode($search_begin)?>&date2=<?=urlencode($search_end)?>";
-                                        jQuery('#puslapis_load').show();
-                                        jQuery.ajax
-                                        ({
-                                            type: "GET",
-                                            url: url,
-                                            dataType: datatype,
-                                            success: function (html) {
-                                              jQuery('#recordai').append(html);
-                                            },
-                                            error: function () {
-                                                console.log("request no. 1 have failed " + url);
-                                            }
-                                        }).then(function () {
-                                            jQuery('#puslapis_load').hide();
-                                        });
-
-
-                                    } // end of
-                                });
-*/
-</script>
 <?php
 require_once("footer.php");
 ?>

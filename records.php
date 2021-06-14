@@ -58,7 +58,6 @@ if ($result->num_rows > 0) {
   while($row = $result->fetch_assoc()) {
     $pradzia = $row["time_start"];
     $time1 = $row["laikas"];
-//    $current_id = $row["id"];
     if (strpos($time1,"-") !== false) {
     $time1 = "unknwon";
     continue; // we skip this file because it's incomplete!

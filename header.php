@@ -53,14 +53,6 @@ if (isIPadPro == false) {
   });
 } else {
 
-// iOS hack
-/*var tempCSS = $('a').css('-webkit-tap-highlight-color');
-        $('body').css('cursor', 'pointer')                                    // Make iOS honour the click event on body
-                 .css('-webkit-tap-highlight-color', 'rgba(0, 0, 0, 0)');     // Stops content flashing when body is clicked
-        // Re-apply cached CSS
-        $('a').css('-webkit-tap-highlight-color', tempCSS);*/
-
-//$(document).on("click tap", ".preview", function () {
 $(document).bind('click tap', ".preview", function(event) {
 var target = $( event.target )
 if (target.is("[video]")||target.is("[image]")) {
@@ -97,19 +89,6 @@ if (isIPadPro == false) {
                 $('#view'+id).attr('counter',count);
                 $('#view'+id).html("<font color='grey'>Viewed "+count+" times</font>");
                 var w = window.open("<?=base_url()?>/preview-movie.php?id="+id, "popupWindow", "width=1024, height=798, scrollbars=yes");
-                //var w = window.open("", "popupWindow", "width=1024, height=798, scrollbars=yes");
-/*                var $w = $(w.document.body);
-                $w.html('<video width="1000" height="700" controls autoplay>'+
-                '<source src="<?=base_url()?>/watch.php?file='+failas+'" type="video/mp4">'+
-                'Your browser does not support the video tag.</video>'+
-                '<a target="_blank" href="<?=base_url()?>/watch.php?file='+failas+'"><button type="button" style="background-color: #4CAF50; padding: 12px 12px; width: 100%;"></button></a><br>'+
-                '<button type="button" style="background-color: #f44336; padding: 12px 12px; width: 100%;" onclick="self.close()"></button>'+
-                '<script>document.addEventListener("keydown", function(event) {'+
-                'const key = event.key;'+
-                'if (key === "Escape") {'+
-                'window.close();'+
-                '}'+
-                '});');*/
             });
             $("body").delegate("a#OpenDialogPic","click",function () {
                 var element = $( this );
@@ -120,19 +99,6 @@ if (isIPadPro == false) {
                 $('#view'+id).attr('counter',count);
                 $('#view'+id).html("<font color='grey'>Viewed "+count+" times</font>");
                 var w = window.open("<?=base_url()?>/preview-pic.php?id="+id, "popupWindow", "width=1044, height=798, scrollbars=yes");
-
-     /*           var $w = $(w.document.body);
-
-                $w.html('<img src="<?=base_url()?>/event.php?file='+failas+'" width="1024" height="576"/>' +
-                '<a target="_blank" href="<?=base_url()?>/event.php?file='+failas+'">'+
-                '<button type="button" style="background-color: #4CAF50; padding: 12px 12px; width: 100%;"></button></a><br>'+
-                '<button type="button" style="background-color: #f44336; padding: 12px 12px; width: 100%;" onclick="self.close()"></button>'+
-                '<script>document.addEventListener("keydown", function(event) {'+
-                'const key = event.key;'+
-                'if (key === "Escape") {'+
-                'window.close();'+
-                '}'+
-                '});');*/
             });
 
 }
@@ -156,8 +122,6 @@ if (isIPadPro == false) {
 
                                         },
                                         error:function(xhr,ajaxOptions,thrownError) {
-//                                        alert(xhr.status);
-  //                                      alert(thrownError);
                                         }
                                     });
 }
