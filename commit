@@ -1,4 +1,0 @@
-#!/bin/sh
-git commit
-# git remote add origin ssh://git@gitlab.lt:666/justas/video-gui.git
-git push -u origin master

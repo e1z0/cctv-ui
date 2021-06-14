@@ -4,8 +4,7 @@ A web ui that is designed to view camera recordings and snapshots from [motion](
 
 # Long description
 
-It was designed long before [frigate](https://github.com/blakeblackshear/frigate) has built in abillity to view snapshots or record clips. It was designed for home use only with 1 to 10 cameras. It have abillity to easily navigate the interface with keyboard shortcuts or mouse. You can add clips/snapshots to favorites, make a comment view chart statistics depending on detected object and many more.
-
+It was designed long before [frigate](https://github.com/blakeblackshear/frigate) has built in abillity to view snapshots or record clips. It was designed for home use only with 1 to 10 cameras. It have abillity to easily navigate the interface with keyboard shortcuts or mouse, quick previews (videos, pictures) on mouse cursor some. You can add clips/snapshots to favorites, make a comment, view chart statistics depending on detected object and many more. It was written in pure PHP and is compatible up to php 8.0 version.
 
 # Installation
 
