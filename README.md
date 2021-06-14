@@ -9,7 +9,16 @@ It was designed long before [frigate](https://github.com/blakeblackshear/frigate
 
 # Installation
 
-Put files in **/var/www/html/video** edit **config.php** fill details, provided sample should help with that. Configure motion with mysql database as described in [telegram-cctv](https://github.com/e1z0/telegram-cctv) installation guide and install it also, it will provide interface with frigate snapshots.
+Put files in **/var/www/html/video** edit **config.php** fill details, provided sample should help with that. Configure motion with mysql database as described in [telegram-cctv](https://github.com/e1z0/telegram-cctv) installation guide and install it also, it will provide interface with frigate snapshots. Add to crontab:
+```
+*/10 * * * * root php /var/www/html/video/crontab.php --regular
+0 * * * * root php /var/www/html/video/crontab.php --hour
+0 0 * * * root php /var/www/html/video/crontab.php --day
+0 0 * * 0 root php /var/www/html/video/crontab.php --week
+0 0 1 * * root php /var/www/html/video/crontab.php --month
+0 0 1 1 * root php /var/www/html/video/crontab.php --year
+
+```
 
 # TODO
 
