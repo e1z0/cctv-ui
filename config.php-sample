@@ -1,0 +1,31 @@
+<?php
+
+
+$URL_PREFIX = "video";
+$DB_NAME = "db_name";
+$DB_USER = "db_user";
+$DB_PASS = "db_user_pass";
+$DB_HOST = "db_host";
+$DB_PORT = 3306;
+$FILE_PATH = "/path/to/files";
+
+
+function base_url()
+{
+global $URL_PREFIX;
+
+    $url      = "http://" . $_SERVER['HTTP_HOST'] ."/". $URL_PREFIX;
+    $validURL = str_replace("&", "&amp", $url);
+    return $validURL;
+}
+
+function fix_slashes($url)
+{
+$str = str_replace("/", "\/", $url);
+return $str;
+}
+
+$redis = new Redis();
+$redis->connect('127.0.0.1', 6379);
+
+?>
